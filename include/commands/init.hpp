@@ -15,9 +15,7 @@ namespace commands
      * Used to initialize (create) a strac repository in the current directory.
      * This will create a folder called "strac-archive" along with the "main" branch and migrate all
      * current files and folders into that main branch.
-     * 
-     * @param root_dir file path to the current root directory
      */
-    void init(std::string root_dir);
+    void init();
 }; // namespace commands
 #endif
