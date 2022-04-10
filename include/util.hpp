@@ -14,6 +14,9 @@ namespace util
         std::string strip_root_directory(std::filesystem::path filepath);
         std::string strip_root_directory(std::string filepath);
 
+        std::string strip_branches_directory(std::filesystem::path filepath);
+        std::string strip_branches_directory(std::string filepath);
+
         bool filepath_contains(std::filesystem::path filepath, std::string search_text);
         bool filepath_contains(std::string filepath, std::string search_text);
     }; // namespace filepaths
