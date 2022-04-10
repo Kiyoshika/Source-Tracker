@@ -3,5 +3,6 @@
 
 #include "./commands/init.hpp"
 #include "./commands/new_branch.hpp"
+#include "./commands/delete_branch.hpp"
 
 #endif

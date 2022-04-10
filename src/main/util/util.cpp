@@ -60,3 +60,17 @@ std::string util::branches::get_current_branch()
     file.close();
     return current_branch_name;
 }
+
+bool util::branches::branch_exists(std::string branch_name)
+{
+    std::string search_branch_name;
+    for (auto const& branch_path : std::filesystem::directory_iterator(globals::branches_dir))
+    {
+        // strip root directory (substring is for removing leading slash)
+        search_branch_name = branch_path.path().string().substr(globals::branches_dir.length() + 1);
+
+        if (search_branch_name == branch_name)
+            return true;
+    }
+    return false;
+}
