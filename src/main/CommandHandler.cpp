@@ -16,6 +16,9 @@ int main(int argc, char* argv[])
     
     if (strncmp(argv[1], "delete", 6) == 0)
         commands::delete_branch(std::string(argv[2]));
+    
+    if (strncmp(argv[1], "branches", 8) == 0)
+        commands::branches();
 
     return 0;
 }

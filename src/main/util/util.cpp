@@ -17,6 +17,16 @@ std::string util::filepaths::strip_root_directory(std::string filepath)
     return filepath.substr(globals::root_dir.length());
 }
 
+std::string util::filepaths::strip_branches_directory(std::filesystem::path filepath)
+{
+    return filepath.string().substr(globals::branches_dir.length());
+}
+
+std::string util::filepaths::strip_branches_directory(std::string filepath)
+{
+    return filepath.substr(globals::branches_dir.length());
+}
+
 bool util::filepaths::filepath_contains(std::filesystem::path filepath, std::string search_text)
 {
     return filepath.string().find(search_text) != std::string::npos;

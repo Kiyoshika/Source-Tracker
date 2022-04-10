@@ -3,10 +3,11 @@ add_executable(strac
     main/globals.cpp
     # command handler
     main/CommandHandler.cpp 
+    # commands
     main/commands/init.cpp
-    # branches
     main/commands/new_branch.cpp
     main/commands/delete_branch.cpp
+    main/commands/branches.cpp
     # util
     main/util/util.cpp)
 
