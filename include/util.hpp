@@ -27,6 +27,7 @@ namespace util
     {
         void switch_branch(std::string branch_name);
         std::string get_current_branch();
+        bool branch_exists(std::string branch_name);
     }; // namespace branches
 }; // namespace util
 #endif

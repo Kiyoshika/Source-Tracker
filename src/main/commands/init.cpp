@@ -11,9 +11,9 @@ static void write_root_file()
 
 void commands::init()
 {
-    std::filesystem::create_directories(globals::root_dir + "/strac-archive/branches/main");
+    std::filesystem::create_directories(globals::branches_dir + "/main");
     write_root_file();
     util::branches::switch_branch("main");
-    util::files::copy_files(globals::root_dir, globals::root_dir + "/strac-archive/branches/main", true);
+    util::files::copy_files(globals::root_dir, globals::branches_dir + "/main", true);
     std::cout << "initialized repository and created [main] branch!\n";
 }
