@@ -5,5 +5,6 @@
 #include "./commands/new_branch.hpp"
 #include "./commands/delete_branch.hpp"
 #include "./commands/branches.hpp"
+#include "./commands/switch.hpp"
 
 #endif
