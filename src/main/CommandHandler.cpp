@@ -19,6 +19,9 @@ int main(int argc, char* argv[])
     
     if (strncmp(argv[1], "branches", 8) == 0)
         commands::branches();
+    
+    if (strncmp(argv[1], "switch", 6) == 0)
+        commands::switch_branch(std::string(argv[2]));
 
     return 0;
 }

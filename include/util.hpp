@@ -23,7 +23,8 @@ namespace util
 
     namespace files
     {
-        void copy_files(std::string from_path, std::string to_path, bool ignore_strac_files = false);
+        void copy_files(std::string from_path, std::string to_path, bool ignore_strac_files = true);
+        void remove_files(std::string filepath, bool ignore_strac_files = true);
     }; // namespace files
 
     namespace branches

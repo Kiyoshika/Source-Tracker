@@ -55,6 +55,24 @@ void util::files::copy_files(std::string from_path, std::string to_path, bool ig
     }
 }
 
+void util::files::remove_files(std::string filepath, bool ignore_strac_files)
+{
+    // recursively scan root directory and store everything (besides strac files) into "main" branch
+    std::string stripped_dir;
+    for (auto const& current_file : std::filesystem::recursive_directory_iterator(filepath))
+    {
+        // don't read anything within generated strac files (when specified)
+        if (ignore_strac_files && util::filepaths::filepath_contains(current_file.path(), "strac-archive"))
+            continue;
+        
+        try
+        {
+            std::filesystem::remove(current_file.path());
+        } catch (std::filesystem::filesystem_error const& ex) {}
+
+    }
+}
+
 void util::branches::switch_branch(std::string branch_name)
 {
     std::ofstream branch_file(globals::root_dir + "/strac-archive/current-branch.txt");

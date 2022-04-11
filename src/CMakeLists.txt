@@ -8,6 +8,7 @@ add_executable(strac
     main/commands/new_branch.cpp
     main/commands/delete_branch.cpp
     main/commands/branches.cpp
+    main/commands/switch.cpp
     # util
     main/util/util.cpp)
 
